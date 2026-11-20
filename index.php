@@ -2,20 +2,20 @@
 
 use Pbo\Marketplace\Produk;
 
-require_once('./propertyConstant.php');
+require_once('./PropertyConstant.php');
 
 $produk = new Produk('P001', 'Laptop', 10000000, 5);
 
-echo "Produk: " . $produk->nama;
+echo "Produk: " . $produk->getNama();
 echo "<br/>";
 
-echo "Harga: " . $produk->harga;
+echo "Harga: " . $produk->getHarga();
 echo "<br/>";
 
-echo "Stok: " . $produk->stok;
+echo "Stok: " . $produk->getStok();
 echo "<br/>";
 
-echo "Pajak: " . $produk->pajak() . "%";
+echo "Pajak: " . Produk::persenPajak() . "%";
 echo "<br/>";
 
-echo "Total harga setelah pajak: Rp." . $produk->total();
+echo "Total harga setelah pajak: Rp." . $produk->hitungTotal();
